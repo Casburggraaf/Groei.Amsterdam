@@ -1,15 +1,14 @@
 {
-  "private": true,
-  "name": "express-server",
+  "name": "Amsterdam-Grow-AdamNet NodeJS",
   "version": "1.0.0",
-  "description": "Simple express example",
+  "description": "Amsterdam-Grow-AdamNet NodeJS",
   "license": "MIT",
   "keywords": [],
-  "homepage": "https://github.com/cmda-be/course-17-18/tree/master/examples/express-server",
-  "repository": "cmda-be/course-17-18",
-  "bugs": "https://github.com/cmda-be/course-17-18/issues",
-  "author": "Titus Wormer <tituswormer@gmail.com> (wooorm.com)",
+  "homepage": "https://github.com/Casburggraaf/performance-matters-server-side",
+  "repository": "performance-matters-server-side",
+  "author": "Cas Burggraaf <casburggraaf@gmail.com> (casburggraaf.com)",
   "contributors": [
+    "Cas Burggraaf <casburggraaf@gmail.com> (http://casburggraaf.com)",
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
   ],
   "dependencies": {
@@ -22,6 +21,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ."
+    "start": "node app.js"
   }
 }
