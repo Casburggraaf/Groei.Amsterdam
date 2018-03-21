@@ -11,8 +11,13 @@
 </div>
 <div id="map"></div>
 <div class="overZicht">
-  <h2>Nieuwe straten</h2>
+  <h2>Nieuweeee straten</h2>
+  <!-- <%=JSON.stringify(dataa)%> -->
   <ul id="straten">
   </ul>
 </div>
+<script>
+  window.dataa = <%- JSON.stringify(dataa || null) %>;
+  console.log(window.dataa)
+</script>
 <% include tail.ejs %>

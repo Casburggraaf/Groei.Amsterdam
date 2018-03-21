@@ -10,12 +10,16 @@ import map from "./modules/map.js";
     data: null,
     dataFiltert: null,
     init() {
+      console.log(window.dataa)
+      //console.log(dataa);
       this.slider()
 
       if(localStorage.getItem("allData")){
+      //if(falsers
         data.data = JSON.parse(localStorage.getItem("allData"));
         map.init();
       } else {
+        //map.init;
         document.body.style.setProperty('--loader-status', 'block');
         api.request().then(function () {
           map.init();
