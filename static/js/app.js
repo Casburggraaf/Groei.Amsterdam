@@ -1,4 +1,3 @@
-import api from "./modules/api.js";
 import data from "./modules/data.js";
 import map from "./modules/map.js";
 
@@ -7,24 +6,12 @@ import map from "./modules/map.js";
   // Init Aplication
   const app = {
     rootElement: document.body,
-    data: null,
-    dataFiltert: null,
     init() {
-      console.log(window.dataa)
-      //console.log(dataa);
       this.slider()
 
-      if(localStorage.getItem("allData")){
-      //if(falsers
-        data.data = JSON.parse(localStorage.getItem("allData"));
-        map.init();
-      } else {
-        //map.init;
-        document.body.style.setProperty('--loader-status', 'block');
-        api.request().then(function () {
-          map.init();
-        });
-      }
+      data.data = window.dataa;
+
+      map.init();
       this.sliderPLayer();
     },
     slider() {
@@ -41,19 +28,6 @@ import map from "./modules/map.js";
     sliderPLayer() {
       let _this = this;
       let player = false;
-      // let playerSpeed = 1000;
-      // let interval = setInterval(function () {
-      //   if (player === true) {
-      //     if (document.querySelector("#myRange").value !== document.querySelector("#myRange").max) {
-      //       document.querySelector("#myRange").value = parseInt(document.querySelector("#myRange").value)  + 1;
-      //       data.filter(document.querySelector("#myRange").value)
-      //       document.getElementById("demo").innerHTML = document.querySelector("#myRange").value;
-      //       map.render();
-      //     } else if (document.querySelector("#myRange").value === document.querySelector("#myRange").max) {
-      //       document.querySelector("#myRange").value = document.querySelector("#myRange").min
-      //     }
-      //   }
-      // }, playerSpeed);
 
       document.querySelector("#play").addEventListener("click", function () {
         player = !player;
