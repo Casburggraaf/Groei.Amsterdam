@@ -1,21 +1,30 @@
 <% include head.ejs %>
-<img src="/style/loader.svg" alt="loaderGif">
-<div class="slidecontainer">
-  <input type="range" min="1850" max="2018" value="1900" class="slider" id="myRange">
-  <span id="play" class="buttons">
-    <i class="fas fa-play buttons" data-fa-transform="grow-6"></i>
-    <i class="fas fa-pause buttons hid" data-fa-transform="grow-6"></i>
-  </span>
-  <span id="forward" class="buttons"><i class="fas fa-angle-double-right buttons" data-fa-transform="grow-6"></i></span>
-  <p><span id="demo"></span></p>
-</div>
-<div id="map"></div>
-<div class="overZicht">
-  <h2>Nieuwe straten</h2>
-  <ul id="straten">
-  </ul>
-</div>
-<script>
-  window.dataa = <%- JSON.stringify(dataa || null) %>;
-</script>
+<body class="no-javscript">
+  <img src="/style/loader.svg" alt="loaderGif">
+  <div class="slidecontainer">
+    <input type="range" min="1850" max="2018" value="1900" class="slider" id="myRange">
+    <span id="play" class="buttons">
+      <i class="fas fa-play buttons" data-fa-transform="grow-6"></i>
+      <i class="fas fa-pause buttons hid" data-fa-transform="grow-6"></i>
+    </span>
+    <span id="forward" class="buttons"><i class="fas fa-angle-double-right buttons" data-fa-transform="grow-6"></i></span>
+    <p><span id="demo"></span></p>
+  </div>
+  <div id="map"></div>
+  <div class="overZicht">
+    <h2>Straten</h2>
+    <ul id="straten">
+      <% Object.keys(renderData).forEach(function(key) {%>
+        <li>
+          <h3 id="jaar-<%=key%>"><%=key%></h3>
+          <ul>
+            <%renderData[key].forEach(function(el){%>
+              <li><a href="<%-el.url%>"><%=el.naam%></a></li>
+            <%});%>
+          </ul>
+        </li>
+      <%});%>
+    </ul>
+  </div>
+</body>
 <% include tail.ejs %>

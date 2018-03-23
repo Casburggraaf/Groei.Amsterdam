@@ -1,5 +1,9 @@
-import data from "./modules/data.js";
-import map from "./modules/map.js";
+// import data from "./modules/data.js";
+// import map from "./modules/map.js";
+var data = require("./modules/data.js");
+var map = require("./modules/map.js");
+
+
 
 (function () {
   "use strict";
@@ -7,10 +11,12 @@ import map from "./modules/map.js";
   const app = {
     rootElement: document.body,
     init() {
+      document.querySelector("body").classList.remove("no-javscript");
+
       this.slider()
 
       data.data = window.dataa;
-
+      console.log(map);
       map.init();
       this.sliderPLayer();
     },

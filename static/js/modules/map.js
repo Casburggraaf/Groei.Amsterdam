@@ -1,4 +1,6 @@
-import data from "./data.js";
+// import data from "./data.js";
+var data = require("./data.js");
+
 
 const map = {
   mymap: L.map('map', { zoomControl:false }).setView([52.37, 4.86], 13),
@@ -112,4 +114,5 @@ const map = {
   }
 };
 
-export default map;
+module.exports = map;
+//export const map;
