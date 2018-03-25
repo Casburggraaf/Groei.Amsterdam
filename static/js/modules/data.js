@@ -1,7 +1,3 @@
-// import map from "./map.js";
-var map = require("./map.js");
-
-
 const data = {
   data: null,
   dataParsed: {},
@@ -24,4 +20,4 @@ const data = {
 };
 
 module.exports = data;
-// export const data;
+// export default data;

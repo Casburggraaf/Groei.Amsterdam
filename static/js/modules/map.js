@@ -21,7 +21,6 @@ const map = {
     let _this = this;
 
     this.mymap.keyboard.disable();
-
     data.data.results.bindings.forEach(function (el) {
       let tempCordi = el.wkt.value;
       tempCordi = tempCordi.replace("MULTILINESTRING((", "");
@@ -115,4 +114,4 @@ const map = {
 };
 
 module.exports = map;
-//export const map;
+// export default map;

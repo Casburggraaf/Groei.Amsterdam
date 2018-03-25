@@ -3,8 +3,6 @@
 var data = require("./modules/data.js");
 var map = require("./modules/map.js");
 
-
-
 (function () {
   "use strict";
   // Init Aplication

@@ -2,19 +2,12 @@
 
 var fetch = require('node-fetch')
 var express = require('express')
-var find = require('array-find')
-var slug = require('slug')
-var bodyParser = require('body-parser')
-var multer = require('multer')
-var fs = require('fs');
-var NodeMonkey = require('node-monkey')
 var browserify = require('browserify-middleware');
-//NodeMonkey()
 
 express()
   .use(express.static('static'))
   .use(bodyParser.urlencoded({extended: true}))
-  // .use('/js/bundle.js', browserify(__dirname + '/static/js'))
+  .use('/js/bundle.js', browserify(__dirname + '/static/js/app.js'))
   .set('view engine', 'ejs')
   .set('views', 'view')
   .get('/', home)
