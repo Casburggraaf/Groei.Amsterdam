@@ -10,6 +10,7 @@ express()
   .set('view engine', 'ejs')
   .set('views', 'view')
   .get('/', home)
+  .get("/offline/", offline)
   //.use(notFound)
   .listen(8000)
 
@@ -21,6 +22,17 @@ function home(req, res) {
     });
   }else {
     res.render('home.ejs', {dataa:data.data, renderData: data.dataParsed, layers: data.layers});
+  }
+}
+
+function offline(req, res) {
+  //res.status(404).render('not-found.ejs')
+  if(data.data === null){
+    api.request().then(function () {
+      res.render('offline.ejs', {dataa: data.data, renderData: data.dataParsed, layers: data.layers});
+    });
+  }else {
+    res.render('offline.ejs', {dataa:data.data, renderData: data.dataParsed, layers: data.layers});
   }
 }
 
