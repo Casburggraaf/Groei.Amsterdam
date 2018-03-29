@@ -21,42 +21,7 @@ const map = {
     let _this = this;
 
     this.mymap.keyboard.disable();
-    // data.data.results.bindings.forEach(function (el) {
-    //   let tempCordi = el.wkt.value;
-    //   tempCordi = tempCordi.replace("MULTILINESTRING((", "");
-    //   tempCordi = tempCordi.replace("LINESTRING(", "");
-    //   tempCordi = tempCordi.replace(/\(/g, "");
-    //   tempCordi = tempCordi.replace(/\)/g, "");
-    //   tempCordi = tempCordi.replace(/POINT/g, "");
-    //   tempCordi = tempCordi.split(",");
-    //   tempCordi = tempCordi.map(function (obj) {
-    //     obj = obj.split(" ");
-    //     return obj;
-    //   })
-    //   el.wkt.value = tempCordi;
-    //   if (!data.dataParsed[el.start.value]) {
-    //     data.dataParsed[el.start.value] = [];
-    //   }
-    //   data.dataParsed[el.start.value].push(el);
-    // });
-    //
-    // Object.keys(data.dataParsed).forEach(function(key) {
-    //   var value = data.dataParsed[key];
-    //   if (!_this.layers[key]) {
-    //     _this.layers[key] = [];
-    //   }
-    //
-    //   Object.keys(value).forEach(function(index) {
-    //     let cordi = value[index].wkt.value
-    //     let tempObject = {
-    //       "type": "LineString",
-    //       "coordinates": cordi
-    //     };
-    //     _this.layers[key].push(tempObject)
-    //   });
-    //
-    // });
-
+  
     Object.keys(this.layers).forEach(function(key) {
       let style = {
           "color": "#ff7800",
