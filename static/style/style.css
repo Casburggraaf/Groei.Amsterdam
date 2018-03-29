@@ -31,10 +31,10 @@ img[alt="loaderGif"] {
   border-radius: 5px;
   padding: 0.5em;
   margin-left: 2vw;
-  width: 16vw;
+  width: auto;
   display: flex;
   flex-direction: column;
-  max-height: 90vh;
+  height: 90vh;
   overflow: scroll;
 }
 
@@ -42,6 +42,7 @@ img[alt="loaderGif"] {
   text-align: center;
   font-size: 2em;
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 .overZicht a {
@@ -67,14 +68,14 @@ img[alt="loaderGif"] {
 .slider {
   margin-left: 6px;
   margin-right: 6px;
-    -webkit-appearance: none;
-    width: 95%;
-    height: 4vh;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+  -webkit-appearance: none;
+  width: 95%;
+  height: 4vh;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
 }
 
 .buttons {
@@ -120,4 +121,18 @@ img[alt="loaderGif"] {
   position: fixed;
   height: 100vh;
   width: 100vw;
+}
+
+
+
+/* No Javascript Style  */
+
+.no-javscript .slidecontainer {
+  display: none;
+}
+
+.no-javscript .overZicht {
+  margin: 2.5% 5%;
+  width: 90%;
+  height: 95%;
 }

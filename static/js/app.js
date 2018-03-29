@@ -1,26 +1,22 @@
-import api from "./modules/api.js";
-import data from "./modules/data.js";
-import map from "./modules/map.js";
+// import data from "./modules/data.js";
+// import map from "./modules/map.js";
+var data = require("./modules/data.js");
+var map = require("./modules/map.js");
 
 (function () {
   "use strict";
   // Init Aplication
   const app = {
     rootElement: document.body,
-    data: null,
-    dataFiltert: null,
     init() {
+      document.querySelector("body").classList.remove("no-javscript");
+
       this.slider()
 
-      if(localStorage.getItem("allData")){
-        data.data = JSON.parse(localStorage.getItem("allData"));
-        map.init();
-      } else {
-        document.body.style.setProperty('--loader-status', 'block');
-        api.request().then(function () {
-          map.init();
-        });
-      }
+      data.data = window.dataa;
+      map.layers = window.layers;
+      console.log(map);
+      map.init();
       this.sliderPLayer();
     },
     slider() {
@@ -37,19 +33,6 @@ import map from "./modules/map.js";
     sliderPLayer() {
       let _this = this;
       let player = false;
-      // let playerSpeed = 1000;
-      // let interval = setInterval(function () {
-      //   if (player === true) {
-      //     if (document.querySelector("#myRange").value !== document.querySelector("#myRange").max) {
-      //       document.querySelector("#myRange").value = parseInt(document.querySelector("#myRange").value)  + 1;
-      //       data.filter(document.querySelector("#myRange").value)
-      //       document.getElementById("demo").innerHTML = document.querySelector("#myRange").value;
-      //       map.render();
-      //     } else if (document.querySelector("#myRange").value === document.querySelector("#myRange").max) {
-      //       document.querySelector("#myRange").value = document.querySelector("#myRange").min
-      //     }
-      //   }
-      // }, playerSpeed);
 
       document.querySelector("#play").addEventListener("click", function () {
         player = !player;
