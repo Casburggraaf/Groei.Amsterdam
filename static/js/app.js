@@ -14,6 +14,7 @@ var map = require("./modules/map.js");
       this.slider()
 
       data.data = window.dataa;
+      map.layers = window.layers;
       console.log(map);
       map.init();
       this.sliderPLayer();

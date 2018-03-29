@@ -6,7 +6,6 @@ var browserify = require('browserify-middleware');
 
 express()
   .use(express.static('static'))
-  .use(bodyParser.urlencoded({extended: true}))
   .use('/js/bundle.js', browserify(__dirname + '/static/js/app.js'))
   .set('view engine', 'ejs')
   .set('views', 'view')
@@ -18,10 +17,10 @@ function home(req, res) {
   //res.status(404).render('not-found.ejs')
   if(data.data === null){
     api.request().then(function () {
-      res.render('home.ejs', {dataa: data.data, renderData: data.dataParsed});
+      res.render('home.ejs', {dataa: data.data, renderData: data.dataParsed, layers: data.layers});
     });
   }else {
-    res.render('home.ejs', {dataa:data.data, renderData: data.dataParsed});
+    res.render('home.ejs', {dataa:data.data, renderData: data.dataParsed, layers: data.layers});
   }
 }
 
@@ -70,6 +69,8 @@ const api = {
 const data = {
   data: null,
   dataParsed: {},
+  layersTemp: {},
+  layers: {},
   parse() {
     const _this = this
 
@@ -85,6 +86,44 @@ const data = {
         url: data.data.results.bindings[key].street.value,
       });
     });
-    //console.log(data.dataParsed);
+    this.makeLayers()
+  },
+  makeLayers() {
+    const _this = this;
+
+    data.data.results.bindings.forEach(function (el) {
+      let tempCordi = el.wkt.value;
+      tempCordi = tempCordi.replace("MULTILINESTRING((", "");
+      tempCordi = tempCordi.replace("LINESTRING(", "");
+      tempCordi = tempCordi.replace(/\(/g, "");
+      tempCordi = tempCordi.replace(/\)/g, "");
+      tempCordi = tempCordi.replace(/POINT/g, "");
+      tempCordi = tempCordi.split(",");
+      tempCordi = tempCordi.map(function (obj) {
+        obj = obj.split(" ");
+        return obj;
+      })
+      el.wkt.value = tempCordi;
+      if (!data.layersTemp[el.start.value]) {
+        data.layersTemp[el.start.value] = [];
+      }
+      data.layersTemp[el.start.value].push(el);
+    });
+
+    Object.keys(data.layersTemp).forEach(function(key) {
+      var value = data.layersTemp[key];
+      if (!_this.layers[key]) {
+        _this.layers[key] = [];
+      }
+
+      Object.keys(value).forEach(function(index) {
+        let cordi = value[index].wkt.value
+        let tempObject = {
+          "type": "LineString",
+          "coordinates": cordi
+        };
+        data.layers[key].push(tempObject)
+      });
+    });
   }
 }

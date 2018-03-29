@@ -3,10 +3,10 @@ const data = {
   dataParsed: {},
   dataFiltert: null,
   filter(date) {
-    let newStreats = this.data.results.bindings.filter(function (el) {
-      return el.start.value === date
-    });
-    this.dataFiltert = newStreats;
+    // let newStreats = this.data.results.bindings.filter(function (el) {
+    //   return el.start.value === date
+    // });
+    // this.dataFiltert = newStreats;
 
     let list = document.querySelector("#straten");
 
