@@ -1,4 +1,4 @@
-# ![logo](https://user-images.githubusercontent.com/373753/38177249-8f35e2f8-35fe-11e8-9c00-2fa66e10b739.png)
+# ![logo](https://cdn.rawgit.com/Casburggraaf/241740757355fcfbe6c8a3455122376d/raw/157ccebf6807d75ec28f3563b9186311ad80267c/logo.svg?sanitize=true)
 > A interactive growth map the city Amsterdam, live demo, [Groei.Amstedam](https://groei.amsterdam)
 
 [![Build Status](https://travis-ci.org/gitpoint/git-point.svg?branch=master)](https://travis-ci.org/gitpoint/git-point) [![dependencies Status](https://david-dm.org/Casburggraaf/performance-matters-server-side/status.svg)](https://david-dm.org/Casburggraaf/performance-matters-server-side)  [![license](https://img.shields.io/github/license/nhnent/tui.editor.svg)](https://github.com/nhnent/tui.editor/blob/master/LICENSE)
