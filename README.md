@@ -15,16 +15,16 @@
 
 ### 📙 Overview
 
-Groei.Amstedam is a interactive map where you can see the development of the city trough the years. This application is build in one week and has been improved for the course **Performance Matters**. This project is made in cooperation with [HvA](http://www.amsterdamuas.com), [Adamnet](http://www.adamnet.nl) and [OBA](https://www.oba.nl/oba/english.html)
+Groei.Amstedam is a interactive map where you can see the development of the city trough the years. This application is build in one week and has been improved for the course **Performance Matters**. This project is made in cooperation with [HvA](http://www.amsterdamuas.com), [AdamNet](http://www.adamnet.nl) and [OBA](https://www.oba.nl/oba/english.html).
 
 ## 🎨 Features
-* A Interactive map. Build with [LeafLet](http://leafletjs.com) & [MapBox](https://www.mapbox.com)
-* The most uptodate data of Amsterdam, fetch from [AdamLink](https://adamlink.nl)
-* A Scrollbar to slide trough the years
-* Can be used with or without mouse/touchscreen
-* A autoplay function with a option to increase the play speed
+* An interactive map. Build with [LeafLet](http://leafletjs.com) & [MapBox](https://www.mapbox.com)
+* The most up to date data of Amsterdam, fetch from [AdamLink](https://adamlink.nl)
+* A Scrollbar to slide through the years
+* Can be used with or without mouse or touchscreen
+* An autoplay function with an option to increase the play speed
 * Serverside fetching and parsing of the api
-* A Offline([ServiceWorker](https://serviceworke.rs/)) and Non-JavaScript([EJS Templating](http://www.embeddedjs.com)) version.
+* An offline([ServiceWorker](https://serviceworke.rs/)) and Non-JavaScript([EJS Templating](http://www.embeddedjs.com)) version.
 
 ## 🚀 Installation
 Clone the repository
@@ -46,7 +46,7 @@ $ npm run dev
 
 ## 🔎 Audit
 <details>
-<summary>First Audit</summary>
+<summary><ins>First Audit</ins></summary>
 
 ![audit base](https://user-images.githubusercontent.com/373753/38198996-36743728-368f-11e8-9578-fb6a26014631.png)
 ![Audit gif](https://user-images.githubusercontent.com/373753/38203545-da248c64-369f-11e8-94da-0e91e3003131.gif)
@@ -64,10 +64,10 @@ $ npm run dev
   * Always online
   * G-zip
 * Serverside Templating
-* browserify to bundle all JavaScript files
+* Browserify to bundle all JavaScript files
 * Improvement on how to handle render map changes
 
-To improve the rendertime of the map after a year change I made a script to handle changes of only one year, this is used when the play button is pressed or when the user navigates by arrow keys. Normally on every change, every layer that contains a year is given a opacity 0. Than a script will filter all "old" streets and gives it a blue color. Then it will find the new layer and gives it the color red. The new script will first detect that the change is only one year after that it will only change the previous layer to blue and change the next layer to the color red.
+To improve the rendertime of the map after a change I made a script to handle changes of only one year, this is used when the play button is pressed or when the user navigates by arrow keys. Normally on every change, every layer that contains a year is given a opacity 0. Than a script will filter all "old" streets and gives it a blue color. Then it will find the new layer and gives it the color red. The new script will first detect that the change is only one year after that it will only change the previous layer to blue and change the next layer to the color red.
 ```javascript
 render() {
   const _this = this;
@@ -108,7 +108,7 @@ render() {
 ```
 
 <details>
-<summary>Final Audit</summary>
+<summary><ins>Final Audit</ins></summary>
 
 ![Audit final](https://user-images.githubusercontent.com/373753/38206680-9a76fab4-36ab-11e8-95ea-2bee6a2ea4c5.png) ![gif](https://user-images.githubusercontent.com/373753/38206620-689e0eec-36ab-11e8-9379-ea889393a5e3.gif)
 *[Complete report](http://htmlpreview.github.io/?https://github.com/Casburggraaf/Groei.Amsterdam/blob/master/audit/final/index.html)*
