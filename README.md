@@ -15,7 +15,7 @@
 
 ### 📙 Overview
 
-Groei.Amstedam is a interactive map where you can see the development of the city trough the years. This application is build in one week and has been improved for the course **Performance Matters**. This project is made in cooperation with [HvA](http://www.amsterdamuas.com), [AdamNet](http://www.adamnet.nl) and [OBA](https://www.oba.nl/oba/english.html).
+Groei.Amstedam is a interactive map where you can see the development of the city through the years. This application is build in one week and has been improved for the course **Performance Matters**. This project is made in cooperation with [HvA](http://www.amsterdamuas.com), [AdamNet](http://www.adamnet.nl) and [OBA](https://www.oba.nl/oba/english.html).
 
 ## 🎨 Features
 * An interactive map. Build with [LeafLet](http://leafletjs.com) & [MapBox](https://www.mapbox.com)
@@ -23,7 +23,7 @@ Groei.Amstedam is a interactive map where you can see the development of the cit
 * A Scrollbar to slide through the years
 * Can be used with or without mouse or touchscreen
 * An autoplay function with an option to increase the play speed
-* Serverside fetching and parsing of the api
+* server-side fetching and parsing of the api
 * An offline([ServiceWorker](https://serviceworke.rs/)) and Non-JavaScript([EJS Templating](http://www.embeddedjs.com)) version
 
 ## 🚀 Installation
@@ -55,19 +55,19 @@ $ npm run dev
 </details>
 
 ### The improvements I made for this app:
-* Fetch Api and store the data serverside, in comparison to fetching the api client-side on every reload
-* Parse data serverside
-* CDN, [cloudflare](http://cloudflare.com). With gives these improvements
+* Fetch Api and store the data server-side, in comparison to fetching the api client-side on every reload
+* Parse data server-side
+* CDN, [CloudFlare](http://cloudflare.com). With gives these improvements
   * Minification of the HTML, JS and CSS
   * Http2
   * Caching
   * Always online
   * G-zip
-* Serverside Templating
+* server-side Templating
 * Browserify to bundle all JavaScript files
 * Improvement on how to handle render map changes
 
-To improve the rendertime of the map after a change I made a script to handle changes of only one year, this is used when the play button is pressed or when the user navigates by arrow keys. Normally on every change, every layer that contains a year is given a opacity 0. Than a script will filter all "old" streets and gives it a blue color. Then it will find the new layer and gives it the color red. The new script will first detect that the change is only one year after that it will only change the previous layer to blue and change the next layer to the color red.
+To improve the render time of the map after a change I made a script to handle changes of only one year, this is used when the play button is pressed or when the user navigates by arrow keys. Normally on every change, every layer that contains a year is given an opacity 0. Than a script will filter all "old" streets and gives it a blue color. Then it will find the new layer and gives it the color red. The new script will first detect that the change is only one year after that it will only change the previous layer to blue and change the next layer to the color red.
 ```javascript
 render() {
   const _this = this;
@@ -116,6 +116,13 @@ render() {
 
 ### Conclusion
 By these improvements the first paint is much quicker. First interaction is also improved and the site uses less cpu.
+
+### TODO
+These improvement can be done to improve the app even further
+* Service side rendering of the map [leaflet-headless](https://github.com/jieter/leaflet-headless)
+* Make own modules of code in server.js
+* Store global selectors as variables in server.js
+* Additional features for non-javascript users
 
 ## 📜 License
 This software is licensed under the [MIT](https://github.com/nhnent/tui.editor/blob/master/LICENSE) © [Cas Burggraaf](https://github.com/CasBurggraaf)
