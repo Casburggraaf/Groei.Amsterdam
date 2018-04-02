@@ -3,10 +3,13 @@
 var fetch = require('node-fetch')
 var express = require('express')
 var browserify = require('browserify-middleware');
+var gzip = require('compression');
+
 
 express()
   .use(express.static('static'))
   .use('/js/bundle.js', browserify(__dirname + '/static/js/app.js'))
+  .use(gzip({threshold: 0, filter: () => true}))
   .set('view engine', 'ejs')
   .set('views', 'view')
   .get('/', home)
