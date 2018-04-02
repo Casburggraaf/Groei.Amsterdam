@@ -110,7 +110,7 @@ render() {
 <details>
 <summary>Final Audit</summary>
 
-![Audit final](https://user-images.githubusercontent.com/373753/38206680-9a76fab4-36ab-11e8-95ea-2bee6a2ea4c5.png) gif](https://user-images.githubusercontent.com/373753/38206620-689e0eec-36ab-11e8-9379-ea889393a5e3.gif)
+![Audit final](https://user-images.githubusercontent.com/373753/38206680-9a76fab4-36ab-11e8-95ea-2bee6a2ea4c5.png) ![gif](https://user-images.githubusercontent.com/373753/38206620-689e0eec-36ab-11e8-9379-ea889393a5e3.gif)
 *[Complete report](http://htmlpreview.github.io/?https://github.com/Casburggraaf/Groei.Amsterdam/blob/master/audit/final/index.html)*
 </details>
 
