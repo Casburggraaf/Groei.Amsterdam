@@ -24,7 +24,7 @@ Groei.Amstedam is a interactive map where you can see the development of the cit
 * Can be used with or without mouse or touchscreen
 * An autoplay function with an option to increase the play speed
 * Serverside fetching and parsing of the api
-* An offline([ServiceWorker](https://serviceworke.rs/)) and Non-JavaScript([EJS Templating](http://www.embeddedjs.com)) version.
+* An offline([ServiceWorker](https://serviceworke.rs/)) and Non-JavaScript([EJS Templating](http://www.embeddedjs.com)) version
 
 ## 🚀 Installation
 Clone the repository
