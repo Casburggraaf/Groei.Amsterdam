@@ -27,6 +27,7 @@
   },
   "scripts": {
     "browserify": "browserify static/js/app.js -o static/js/bundle.js",
-    "start": "nodemon --ignore static/ --inspect server.js"
+    "start": "node server.js",
+    "dev": "nodemon --ignore static/ --inspect server.js"
   }
 }
