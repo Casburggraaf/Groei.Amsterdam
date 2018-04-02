@@ -13,13 +13,45 @@
 | --------- | --------- | --------- | --------- | --------- | --------- |
 | IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
-### Overview
+### 📙 Overview
 
 Groei.Amstedam is a interactive map where you can see the development of the city trough the years. This application is build in one week and has been improved for the course **Performance Matters**. This project is made in cooperation with [HvA](http://www.amsterdamuas.com), [Adamnet](http://www.adamnet.nl) and [OBA](https://www.oba.nl/oba/english.html)
 
 ## 🎨 Features
-* A Interactive map.
+* A Interactive map. Build with [LeafLet](http://leafletjs.com) & [MapBox](https://www.mapbox.com)
+* The most uptodate data of Amsterdam, fetch from [AdamLink](https://adamlink.nl)
 * A Scrollbar to slide trough the years
-* 
+* Can be used with or without mouse/touchscreen
+* A autoplay function with a button to increase the play speed
+* Serverside fetching and parsing of the api
+* A Offline([ServiceWorker](https://serviceworke.rs/)) and Non-JavaScript([EJS Templating](http://www.embeddedjs.com)) version.
 
-## Audit
+## 🚀 Installation
+Clone the repository
+```console
+$ git clone https://github.com/Casburggraaf/Groei.Amsterdam
+```
+Install the packages
+```console
+$ npm install
+```
+Run the application
+```console
+$ npm start
+```
+Or run the application for development.
+```console
+$ npm run dev
+```
+
+
+
+## 🔎 Audit
+
+
+
+## 📜 License
+This software is licensed under the [MIT](https://github.com/nhnent/tui.editor/blob/master/LICENSE) © [Cas Burggraaf](https://github.com/CasBurggraaf)
+
+[![Build Status](https://travis-ci.org/Casburggraaf/Groei.Amsterdam.svg?branch=master)](https://travis-ci.org/Casburggraaf/Groei.Amsterdam) [![dependencies Status](https://david-dm.org/CasBurggraaf/Groei.Amsterdam/status.svg)](https://david-dm.org/CasBurggraaf/Groei.Amsterdam) [![LiveDemo](https://img.shields.io/badge/Live%20Demo-online-brightgreen.svg)](https://groei.amsterdam) [![HitCount](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam.svg)](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam)
+ [![license](https://img.shields.io/github/license/nhnent/tui.editor.svg)](https://github.com/nhnent/tui.editor/blob/master/LICENSE)
