@@ -21,10 +21,10 @@ Groei.Amstedam is a interactive map where you can see the development of the cit
 * An interactive map. Build with [LeafLet](http://leafletjs.com) & [MapBox](https://www.mapbox.com)
 * The most up to date data of Amsterdam, fetch from [AdamLink](https://adamlink.nl)
 * A Scrollbar to slide through the years
-* Can be used with or without mouse or touchscreen
+* Accessibility: can be used without mouse or touchscreen
 * An autoplay function with an option to increase the play speed
-* server-side fetching and parsing of the api
-* An offline([ServiceWorker](https://serviceworke.rs/)) and Non-JavaScript([EJS Templating](http://www.embeddedjs.com)) version
+* Server-side fetching and parsing of the api
+* An offline ([ServiceWorker](https://serviceworke.rs/)) and Non-JavaScript ([EJS Templating](http://www.embeddedjs.com)) version
 
 ## 🚀 Installation
 Clone the repository
@@ -46,13 +46,14 @@ $ npm run dev
 
 ## 🔎 Audit
 <details>
-<summary><ins>First Audit</ins></summary>
+<summary><ins>First Audit</ins>(Click to see report)</summary>
 
 ![audit base](https://user-images.githubusercontent.com/373753/38198996-36743728-368f-11e8-9578-fb6a26014631.png)
 ![Audit gif](https://user-images.githubusercontent.com/373753/38203545-da248c64-369f-11e8-94da-0e91e3003131.gif)
 
 *[Complete report](http://htmlpreview.github.io/?https://github.com/Casburggraaf/Groei.Amsterdam/blob/master/audit/old/index.html)*
 </details>
+
 
 ### The improvements I made for this app:
 * Fetch Api and store the data server-side, in comparison to fetching the api client-side on every reload
@@ -63,7 +64,7 @@ $ npm run dev
   * Caching
   * Always online
   * G-zip
-* server-side Templating
+* Server-side Templating
 * Browserify to bundle all JavaScript files
 * Improvement on how to handle render map changes
 
@@ -108,18 +109,18 @@ render() {
 ```
 
 <details>
-<summary><ins>Final Audit</ins></summary>
+<summary><ins>Final Audit</ins>(Click to see report)</summary>
 
 ![Audit final](https://user-images.githubusercontent.com/373753/38206680-9a76fab4-36ab-11e8-95ea-2bee6a2ea4c5.png) ![gif](https://user-images.githubusercontent.com/373753/38206620-689e0eec-36ab-11e8-9379-ea889393a5e3.gif)
 *[Complete report](http://htmlpreview.github.io/?https://github.com/Casburggraaf/Groei.Amsterdam/blob/master/audit/final/index.html)*
 </details>
 
 ### Conclusion
-By these improvements the first paint is much quicker. First interaction is also improved and the site uses less cpu.
+By these improvements the first paint is much quicker. First interaction is also improved and the site uses less cpu. Groei.amsterdam was build in one week client side. Right now it is server-side rendering, which improves the performance. Furthermore, the application is working without javascript. If there will be a JavaScript error client side, the application is still working. Finally, the accessibility mark has also improved. It is possible to use the application with keyboard only.
 
 ### TODO
 These improvement can be done to improve the app even further
-* Service side rendering of the map [leaflet-headless](https://github.com/jieter/leaflet-headless)
+* Server-side rendering of the map [leaflet-headless](https://github.com/jieter/leaflet-headless)
 * Make own modules of code in server.js
 * Store global selectors as variables in server.js
 * Additional features for non-javascript users
