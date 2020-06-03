@@ -72,7 +72,6 @@ const api = {
         }
       })
   	.then(function (resp) {
-      console.log(resp);
       return resp.json();
     }).then(function(content) {
        data.data = content;

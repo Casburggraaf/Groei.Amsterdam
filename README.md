@@ -1,10 +1,10 @@
 # ![logo](https://cdn.rawgit.com/Casburggraaf/241740757355fcfbe6c8a3455122376d/raw/157ccebf6807d75ec28f3563b9186311ad80267c/logo.svg?sanitize=true)
-> A interactive growth map of the city Amsterdam, [Live Demo](https://groei.amsterdam)
+> A interactive growth map of the city Amsterdam, [Live Demo](https://groeiamsterdam.casburggraaf.com)
 
-[![Build Status](https://travis-ci.org/Casburggraaf/Groei.Amsterdam.svg?branch=master)](https://travis-ci.org/Casburggraaf/Groei.Amsterdam) [![dependencies Status](https://david-dm.org/CasBurggraaf/Groei.Amsterdam/status.svg)](https://david-dm.org/CasBurggraaf/Groei.Amsterdam) [![LiveDemo](https://img.shields.io/badge/Live%20Demo-online-brightgreen.svg)](https://groei.amsterdam) [![HitCount](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam.svg)](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam)
+[![Build Status](https://travis-ci.org/Casburggraaf/Groei.Amsterdam.svg?branch=master)](https://travis-ci.org/Casburggraaf/Groei.Amsterdam) [![dependencies Status](https://david-dm.org/CasBurggraaf/Groei.Amsterdam/status.svg)](https://david-dm.org/CasBurggraaf/Groei.Amsterdam) [![LiveDemo](https://img.shields.io/badge/Live%20Demo-online-brightgreen.svg)](https://groeiamsterdam.casburggraaf.com) [![HitCount](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam.svg)](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam)
  [![license](https://img.shields.io/github/license/nhnent/tui.editor.svg)](https://github.com/nhnent/tui.editor/blob/master/LICENSE)
 
-<p align="center"><a href="https://groei.amsterdam"><img src="https://user-images.githubusercontent.com/373753/38176972-063296cc-35f9-11e8-9906-f2d9c8ffe594.gif" /></a></p>
+<p align="center"><a href="https://groeiamsterdam.casburggraaf.com"><img src="https://user-images.githubusercontent.com/373753/38176972-063296cc-35f9-11e8-9906-f2d9c8ffe594.gif" /></a></p>
 
 
 ## 🌏 Browser Support
@@ -128,5 +128,5 @@ These improvement can be done to improve the app even further
 ## 📜 License
 This software is licensed under the [MIT](https://github.com/nhnent/tui.editor/blob/master/LICENSE) © [Cas Burggraaf](https://github.com/CasBurggraaf)
 
-[![Build Status](https://travis-ci.org/Casburggraaf/Groei.Amsterdam.svg?branch=master)](https://travis-ci.org/Casburggraaf/Groei.Amsterdam) [![dependencies Status](https://david-dm.org/CasBurggraaf/Groei.Amsterdam/status.svg)](https://david-dm.org/CasBurggraaf/Groei.Amsterdam) [![LiveDemo](https://img.shields.io/badge/Live%20Demo-online-brightgreen.svg)](https://groei.amsterdam) [![HitCount](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam.svg)](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam)
+[![Build Status](https://travis-ci.org/Casburggraaf/Groei.Amsterdam.svg?branch=master)](https://travis-ci.org/Casburggraaf/Groei.Amsterdam) [![dependencies Status](https://david-dm.org/CasBurggraaf/Groei.Amsterdam/status.svg)](https://david-dm.org/CasBurggraaf/Groei.Amsterdam) [![LiveDemo](https://img.shields.io/badge/Live%20Demo-online-brightgreen.svg)](https://groeiamsterdam.casburggraaf.com) [![HitCount](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam.svg)](http://hits.dwyl.io/CasBurggraaf/Groei.Amsterdam)
  [![license](https://img.shields.io/github/license/nhnent/tui.editor.svg)](https://github.com/nhnent/tui.editor/blob/master/LICENSE)
