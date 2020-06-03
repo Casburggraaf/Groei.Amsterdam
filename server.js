@@ -41,7 +41,7 @@ function offline(req, res) {
 
 
 const api = {
-  apiBasisUrl: "https://api.data.adamlink.nl/datasets/AdamNet/all/services/hva2018/sparql?default-graph-uri=&query=",
+  apiBasisUrl: " https://api.druid.datalegend.net/datasets/AdamNet/all/services/endpoint/sparql?default-graph-uri=&query=",
   apiEndUrl: "&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on",
   sparqlquery: `
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -65,8 +65,14 @@ const api = {
 
     _this.sparqlquery = encodeURIComponent(_this.sparqlquery);
     const url = `${_this.apiBasisUrl}${_this.sparqlquery}${_this.apiEndUrl}`;
-    fetch(url)
+    fetch(url,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
   	.then(function (resp) {
+      console.log(resp);
       return resp.json();
     }).then(function(content) {
        data.data = content;
