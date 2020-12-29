@@ -41,7 +41,8 @@ function offline(req, res) {
 
 
 const api = {
-  apiBasisUrl: " https://api.druid.datalegend.net/datasets/AdamNet/all/services/endpoint/sparql?default-graph-uri=&query=",
+ // apiBasisUrl: " https://api.druid.datalegend.net/datasets/AdamNet/all/services/endpoint/sparql?default-graph-uri=&query=",
+  apiBasisUrl: "https://api.druid.datalegend.net/datasets/AdamNet/all/services/endpoint/sparql?default-graph-uri=&query=",
   apiEndUrl: "&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on",
   sparqlquery: `
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -75,6 +76,7 @@ const api = {
       return resp.json();
     }).then(function(content) {
        data.data = content;
+       console.log(content);
        data.parse();
        resolve();
   	}) .catch(function(error) {
@@ -94,25 +96,39 @@ const data = {
   parse() {
     const _this = this
 
-    Object.keys(data.data.results.bindings).forEach(function(key) {
-      var value = data.data.results.bindings[key].start.value;
+    // Object.keys(data.data.results.bindings).forEach(function(key) {
+    //   var value = data.data.results.bindings[key].start.value;
 
+    //   if (!_this.dataParsed[value]) {
+    //     _this.dataParsed[value] = [];
+    //   }
+
+    //   _this.dataParsed[value].push({
+    //     naam: data.data.results.bindings[key].naam.value,
+    //     url: data.data.results.bindings[key].street.value,
+    //   });
+    // });
+
+    Object.keys(data.data).forEach(function(key) {
+      var value = data.data[key].start;
+      //rconsole.log(key);
       if (!_this.dataParsed[value]) {
         _this.dataParsed[value] = [];
       }
 
       _this.dataParsed[value].push({
-        naam: data.data.results.bindings[key].naam.value,
-        url: data.data.results.bindings[key].street.value,
+        naam: data.data[key].naam,
+        url: data.data[key].street,
       });
     });
+    //console.log(_this.dataParsed);
     this.makeLayers()
   },
   makeLayers() {
     const _this = this;
 
-    data.data.results.bindings.forEach(function (el) {
-      let tempCordi = el.wkt.value;
+    data.data.forEach(function (el) {
+      let tempCordi = el.wkt;
       tempCordi = tempCordi.replace("MULTILINESTRING((", "");
       tempCordi = tempCordi.replace("LINESTRING(", "");
       tempCordi = tempCordi.replace(/\(/g, "");
@@ -123,11 +139,11 @@ const data = {
         obj = obj.split(" ");
         return obj;
       })
-      el.wkt.value = tempCordi;
-      if (!data.layersTemp[el.start.value]) {
-        data.layersTemp[el.start.value] = [];
+      el.wkt = tempCordi;
+      if (!data.layersTemp[el.start]) {
+        data.layersTemp[el.start] = [];
       }
-      data.layersTemp[el.start.value].push(el);
+      data.layersTemp[el.start].push(el);
     });
 
     Object.keys(data.layersTemp).forEach(function(key) {
@@ -137,7 +153,7 @@ const data = {
       }
 
       Object.keys(value).forEach(function(index) {
-        let cordi = value[index].wkt.value
+        let cordi = value[index].wkt;
         let tempObject = {
           "type": "LineString",
           "coordinates": cordi
